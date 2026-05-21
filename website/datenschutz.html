@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Datenschutzerklärung – Ziegler AI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #080810; --bg2: #0d0d1a; --primary: #6366f1; --p2: #818cf8;
+      --accent: #a78bfa; --text: #f1f5f9; --muted: #94a3b8;
+      --border: rgba(99,102,241,0.18); --glass: rgba(255,255,255,0.04);
+      --grad: linear-gradient(135deg, #6366f1, #a78bfa);
+    }
+    body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+    .grad-text { background: var(--grad); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .container { max-width: 760px; margin: 0 auto; padding: 0 24px; }
+
+    nav {
+      background: rgba(8,8,16,0.9);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+      padding: 16px 0;
+    }
+    .nav-brand { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+    .nav-logo-text { font-size: 1.2rem; font-weight: 800; letter-spacing: -0.5px; }
+
+    .page-content { padding: 72px 0 100px; }
+    .page-label {
+      font-size: 0.72rem; font-weight: 600; letter-spacing: 2px;
+      text-transform: uppercase; color: var(--p2); margin-bottom: 10px;
+    }
+    h1 { font-size: 2.2rem; font-weight: 800; letter-spacing: -1px; margin-bottom: 12px; }
+    .lead { color: var(--muted); font-size: 0.95rem; margin-bottom: 48px; line-height: 1.75; }
+    h2 { font-size: 1.15rem; font-weight: 700; margin: 40px 0 12px; color: var(--p2); }
+    h3 { font-size: 1rem; font-weight: 600; margin: 24px 0 8px; color: var(--text); }
+    p { color: var(--muted); font-size: 0.92rem; line-height: 1.85; margin-bottom: 12px; }
+    p strong { color: var(--text); }
+    ul { padding-left: 20px; margin-bottom: 12px; }
+    ul li { color: var(--muted); font-size: 0.92rem; line-height: 1.85; margin-bottom: 4px; }
+    a { color: var(--p2); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .divider { height: 1px; background: var(--border); margin: 36px 0; }
+    .notice {
+      background: var(--glass); border: 1px solid var(--border); border-radius: 12px;
+      padding: 20px 24px; margin-bottom: 40px;
+    }
+    .notice p { margin: 0; font-size: 0.85rem; }
+    .toc {
+      background: var(--glass); border: 1px solid var(--border); border-radius: 12px;
+      padding: 24px; margin-bottom: 40px;
+    }
+    .toc h3 { margin-top: 0; margin-bottom: 12px; }
+    .toc ol { padding-left: 20px; }
+    .toc ol li { font-size: 0.88rem; color: var(--muted); margin-bottom: 6px; }
+    .toc ol li a { color: var(--p2); }
+
+    footer { padding: 24px 0; border-top: 1px solid var(--border); display: flex; justify-content: center; }
+    footer a { font-size: 0.82rem; color: var(--muted); text-decoration: none; }
+    footer a:hover { color: var(--p2); }
+    .footer-links { display: flex; gap: 24px; list-style: none; }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="container">
+      <a href="index.html" class="nav-brand">
+        <svg width="32" height="32" viewBox="0 0 38 38" fill="none" aria-hidden="true">
+          <defs>
+            <linearGradient id="dl" x1="4" y1="4" x2="34" y2="34" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#818cf8"/>
+              <stop offset="0.6" stop-color="#a78bfa"/>
+              <stop offset="1" stop-color="#c084fc"/>
+            </linearGradient>
+            <radialGradient id="db" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="#1e1b4b"/>
+              <stop offset="100%" stop-color="#0d0d1a"/>
+            </radialGradient>
+            <filter id="dg" x="-40%" y="-40%" width="180%" height="180%">
+              <feGaussianBlur stdDeviation="1.4" result="blur"/>
+              <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+            </filter>
+          </defs>
+          <circle cx="19" cy="19" r="18" fill="url(#db)"/>
+          <circle cx="19" cy="19" r="18" stroke="#6366f1" stroke-width="0.8" stroke-opacity="0.5"/>
+          <path d="M11 13H27L11 25H27" stroke="url(#dl)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="miter" filter="url(#dg)"/>
+          <circle cx="11" cy="13" r="2.5" fill="url(#dl)" filter="url(#dg)"/>
+          <circle cx="27" cy="13" r="2.5" fill="url(#dl)" filter="url(#dg)"/>
+          <circle cx="11" cy="25" r="2.5" fill="url(#dl)" filter="url(#dg)"/>
+          <circle cx="27" cy="25" r="2.5" fill="url(#dl)" filter="url(#dg)"/>
+        </svg>
+        <span class="nav-logo-text grad-text">Ziegler AI</span>
+      </a>
+    </div>
+  </nav>
+
+  <div class="page-content">
+    <div class="container">
+
+      <p class="page-label">Rechtliches</p>
+      <h1>Datenschutzerklärung</h1>
+      <p class="lead">Stand: Mai 2025 · Diese Datenschutzerklärung informiert über die Verarbeitung personenbezogener Daten beim Besuch dieser Website gemäß Art. 13 DSGVO.</p>
+
+      <div class="toc">
+        <h3>Inhaltsverzeichnis</h3>
+        <ol>
+          <li><a href="#verantwortlicher">Verantwortlicher</a></li>
+          <li><a href="#hosting">Hosting & Server-Logfiles</a></li>
+          <li><a href="#google-fonts">Google Fonts</a></li>
+          <li><a href="#cal">Cal.com (Terminbuchung)</a></li>
+          <li><a href="#cookies">Cookies</a></li>
+          <li><a href="#rechte">Rechte der betroffenen Personen</a></li>
+          <li><a href="#beschwerderecht">Beschwerderecht</a></li>
+        </ol>
+      </div>
+
+      <h2 id="verantwortlicher">1. Verantwortlicher</h2>
+      <p>
+        <strong>Alexander Ziegler</strong><br/>
+        Tiefenbronner Straße 15<br/>
+        75175 Pforzheim<br/>
+        Deutschland<br/>
+        E-Mail: <a href="mailto:alex16ziegler09@gmail.com">alex16ziegler09@gmail.com</a>
+      </p>
+
+      <div class="divider"></div>
+
+      <h2 id="hosting">2. Hosting & Server-Logfiles</h2>
+      <p>Diese Website wird von einem Hosting-Anbieter bereitgestellt. Beim Abruf der Seiten werden automatisch folgende Informationen in sogenannten Server-Logfiles gespeichert:</p>
+      <ul>
+        <li>IP-Adresse (anonymisiert)</li>
+        <li>Datum und Uhrzeit des Zugriffs</li>
+        <li>Aufgerufene URL</li>
+        <li>Browsertyp und -version</li>
+        <li>Betriebssystem</li>
+        <li>Referrer-URL</li>
+      </ul>
+      <p><strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an der sicheren und stabilen Bereitstellung der Website).</p>
+      <p><strong>Speicherdauer:</strong> Die Logfiles werden nach spätestens 7 Tagen gelöscht.</p>
+
+      <div class="divider"></div>
+
+      <h2 id="google-fonts">3. Google Fonts</h2>
+      <p>Diese Website verwendet Google Fonts, einen Dienst der Google LLC (1600 Amphitheatre Parkway, Mountain View, CA 94043, USA). Beim Laden der Seite wird eine Verbindung zu den Google-Servern hergestellt, dabei wird die IP-Adresse des Besuchers übertragen.</p>
+      <p><strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an einer einheitlichen Darstellung der Website).</p>
+      <p>Weitere Informationen: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>.</p>
+      <p>Zur Vermeidung der Datenübertragung können die Schriften alternativ lokal eingebunden werden – auf Anfrage gerne anpassen.</p>
+
+      <div class="divider"></div>
+
+      <h2 id="cal">4. Cal.com (Terminbuchung)</h2>
+      <p>Für die Buchung von Terminen wird der Dienst Cal.com (Cal.com, Inc., 2261 Market Street, Suite 5122, San Francisco, CA 94114, USA) verwendet. Beim Klick auf den Buchungsbutton werden Nutzer auf die Cal.com-Plattform weitergeleitet.</p>
+      <p>Bei der Buchung eines Termins werden folgende Daten verarbeitet:</p>
+      <ul>
+        <li>Name</li>
+        <li>E-Mail-Adresse</li>
+        <li>Gewünschter Termin</li>
+        <li>Optionale Angaben im Buchungsformular</li>
+      </ul>
+      <p><strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. b DSGVO (Vertragsanbahnung).</p>
+      <p>Weitere Informationen: <a href="https://cal.com/privacy" target="_blank" rel="noopener">Cal.com Privacy Policy</a>.</p>
+
+      <div class="divider"></div>
+
+      <h2 id="cookies">5. Cookies</h2>
+      <p>Diese Website selbst verwendet keine eigenen Cookies. Es werden keine Tracking- oder Analyse-Cookies eingesetzt. Externe Dienste (Google Fonts, Cal.com) können jedoch eigene Cookies verwenden – dies geschieht ausschließlich auf deren Plattformen.</p>
+
+      <div class="divider"></div>
+
+      <h2 id="rechte">6. Rechte der betroffenen Personen</h2>
+      <p>Gemäß DSGVO bestehen folgende Rechte gegenüber dem Verantwortlichen:</p>
+      <ul>
+        <li><strong>Auskunftsrecht</strong> (Art. 15 DSGVO): Auskunft über gespeicherte personenbezogene Daten</li>
+        <li><strong>Berichtigungsrecht</strong> (Art. 16 DSGVO): Berichtigung unrichtiger Daten</li>
+        <li><strong>Löschungsrecht</strong> (Art. 17 DSGVO): Löschung personenbezogener Daten</li>
+        <li><strong>Einschränkung der Verarbeitung</strong> (Art. 18 DSGVO)</li>
+        <li><strong>Datenübertragbarkeit</strong> (Art. 20 DSGVO)</li>
+        <li><strong>Widerspruchsrecht</strong> (Art. 21 DSGVO)</li>
+        <li><strong>Widerruf einer Einwilligung</strong> (Art. 7 Abs. 3 DSGVO)</li>
+      </ul>
+      <p>Anfragen können per E-Mail an <a href="mailto:alex16ziegler09@gmail.com">alex16ziegler09@gmail.com</a> gestellt werden.</p>
+
+      <div class="divider"></div>
+
+      <h2 id="beschwerderecht">7. Beschwerderecht bei der Aufsichtsbehörde</h2>
+      <p>Es besteht das Recht, sich bei einer Datenschutzaufsichtsbehörde über die Verarbeitung personenbezogener Daten zu beschweren. Die zuständige Aufsichtsbehörde richtet sich nach dem Bundesland des Wohnsitzes.</p>
+      <p>Eine Liste aller deutschen Datenschutzaufsichtsbehörden ist abrufbar unter: <a href="https://www.bfdi.bund.de" target="_blank" rel="noopener">www.bfdi.bund.de</a></p>
+
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+      <ul class="footer-links">
+        <li><a href="index.html">← Zurück zur Startseite</a></li>
+        <li><a href="impressum.html">Impressum</a></li>
+      </ul>
+    </div>
+  </footer>
+
+</body>
+</html>
