@@ -117,7 +117,7 @@
     .btn-outline {
       background: rgba(255,255,255,0.04); color: var(--text);
       border: 1px solid rgba(255,255,255,0.1);
-      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px);
     }
     .btn-outline:hover {
       background: rgba(255,255,255,0.07);
@@ -134,10 +134,13 @@
       position: fixed; top: 0; left: 0; right: 0; z-index: 100;
       padding: 14px 0;
       transition: background 0.4s, backdrop-filter 0.4s, border-bottom 0.4s, padding 0.3s;
+      -webkit-transform: translateZ(0);
+      transform: translateZ(0);
+      will-change: padding;
     }
     nav.scrolled {
       background: rgba(6,6,10,0.75);
-      backdrop-filter: blur(18px) saturate(1.4);
+      -webkit-backdrop-filter: blur(18px) saturate(1.4); backdrop-filter: blur(18px) saturate(1.4);
       border-bottom: 1px solid var(--border);
       padding: 10px 0;
     }
@@ -221,7 +224,7 @@
       padding: 7px 16px; border-radius: 999px;
       background: rgba(255,255,255,0.04);
       border: 1px solid rgba(255,255,255,0.08);
-      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px);
       font-family: 'JetBrains Mono', monospace;
       font-size: 0.74rem; font-weight: 500; color: #bbb;
       margin-bottom: 28px; letter-spacing: 0.4px;
@@ -265,7 +268,7 @@
       border: 1px solid rgba(255,255,255,0.08);
       border-radius: 14px;
       overflow: hidden;
-      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px);
       box-shadow:
         0 30px 80px -20px rgba(0,0,0,0.6),
         0 0 60px -20px rgba(212,255,79,0.18),
@@ -361,7 +364,7 @@
       border: 1px solid var(--border);
       border-radius: 22px; padding: 56px 48px;
       position: relative; overflow: hidden;
-      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px);
     }
     .pain-inner::before {
       content: '';
@@ -498,7 +501,7 @@
       border-radius: 18px; padding: 32px;
       position: relative; overflow: hidden;
       display: flex; flex-direction: column;
-      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px);
       transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
     }
     .service-card::before {
@@ -582,7 +585,7 @@
       border-radius: 20px;
       padding: 40px;
       position: relative; overflow: hidden;
-      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px);
       display: grid; grid-template-columns: 1fr 1fr;
       gap: 44px; align-items: center;
       margin-top: 22px;
@@ -597,12 +600,26 @@
       border-color: var(--border-hi);
       box-shadow: 0 28px 70px -28px rgba(212,255,79,0.22);
     }
+    .service-featured-info,
+    .service-featured > .hero-code-wrap {
+      min-width: 0;
+      position: relative; z-index: 1;
+    }
+    .service-featured .hero-code-body {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+    .service-featured .hero-code-body::-webkit-scrollbar { height: 6px; }
+    .service-featured .hero-code-body::-webkit-scrollbar-thumb {
+      background: rgba(212,255,79,0.25); border-radius: 3px;
+    }
     .service-featured .card-spotlight {
       position: absolute; width: 520px; height: 520px;
       border-radius: 50%; pointer-events: none;
       background: radial-gradient(circle, rgba(212,255,79,0.12) 0%, transparent 65%);
       opacity: 0; transition: opacity 0.3s;
       transform: translate(-50%, -50%);
+      z-index: 0;
     }
     .service-featured:hover .card-spotlight { opacity: 1; }
     .service-featured .service-head { margin-bottom: 22px; }
@@ -679,7 +696,7 @@
       background: linear-gradient(180deg, rgba(255,255,255,0.035), rgba(255,255,255,0.01));
       border: 1px solid var(--border);
       border-radius: 16px; position: relative;
-      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px);
       transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
     }
     .step:hover {
@@ -742,7 +759,7 @@
       border: 1px solid var(--border);
       border-radius: 24px; padding: 60px 52px;
       position: relative; overflow: hidden;
-      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px); backdrop-filter: blur(16px);
     }
     .contact-card::before {
       content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px;
@@ -824,15 +841,17 @@
       .nav-links {
         display: none; flex-direction: column;
         position: fixed; top: 0; left: 0; right: 0; bottom: 0;
-        background: rgba(6,6,10,0.97); backdrop-filter: blur(20px);
+        background: rgba(6,6,10,0.97); -webkit-backdrop-filter: blur(20px); backdrop-filter: blur(20px);
         align-items: center; justify-content: center; gap: 40px; z-index: 99;
       }
       .nav-links.open { display: flex; }
       .nav-links a { font-size: 1.3rem; }
       .hamburger { display: flex; z-index: 101; position: relative; }
-      .service-featured { grid-template-columns: 1fr; gap: 28px; padding: 32px 26px; }
-      .hero-code-body { font-size: 0.74rem; padding: 18px 18px; min-height: 240px; line-height: 1.7; }
-      .hero-code-head { padding: 10px 14px; font-size: 0.68rem; }
+      .container { padding: 0 20px; }
+      .service-featured { grid-template-columns: 1fr; gap: 24px; padding: 26px 20px; border-radius: 16px; }
+      .service-featured h3 { font-size: 1.45rem; }
+      .hero-code-body { font-size: 0.72rem; padding: 16px 16px; min-height: 220px; line-height: 1.7; }
+      .hero-code-head { padding: 9px 12px; font-size: 0.66rem; gap: 8px; }
       .about-grid { grid-template-columns: 1fr; gap: 40px; }
       .about-visual { height: 320px; }
       .about-stats { gap: 24px; }
