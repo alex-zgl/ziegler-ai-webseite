@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="de">
 <head>
   <meta charset="UTF-8" />
@@ -11,18 +11,18 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --bg:       #06060a;
-      --bg2:      #08080d;
-      --lime:     #d4ff4f;
-      --lime2:    #8aff3d;
-      --cyan:     #5eb3ff;
+      --bg:       #08080a;
+      --bg2:      #0c0c10;
+      --lime:     #f3c969;
+      --lime2:    #e0a93f;
+      --cyan:     #e0a35a;
       --text:     #ededf2;
       --muted:    #9a9aa5;
       --muted2:   #6a6a75;
       --border:   rgba(255,255,255,0.07);
-      --border-hi: rgba(212,255,79,0.2);
+      --border-hi: rgba(243,201,105,0.2);
       --glass:    rgba(255,255,255,0.035);
-      --grad2:    linear-gradient(135deg, #d4ff4f, #8aff3d);
+      --grad2:    linear-gradient(135deg, #f3c969, #e0a93f);
     }
 
     html { scroll-behavior: smooth; }
@@ -59,8 +59,8 @@
       position: fixed; top: -10%; left: 0; right: 0; height: 60vh;
       pointer-events: none; z-index: 0;
       background:
-        radial-gradient(ellipse 40% 50% at 30% 30%, rgba(212,255,79,0.10), transparent 60%),
-        radial-gradient(ellipse 35% 40% at 70% 25%, rgba(94,179,255,0.07), transparent 65%);
+        radial-gradient(ellipse 40% 50% at 30% 30%, rgba(243,201,105,0.10), transparent 60%),
+        radial-gradient(ellipse 35% 40% at 70% 25%, rgba(224,163,90,0.07), transparent 65%);
       filter: blur(50px);
     }
 
@@ -121,7 +121,7 @@
     h2::before {
       content: ''; width: 4px; height: 20px; border-radius: 2px;
       background: var(--grad2);
-      box-shadow: 0 0 12px rgba(212,255,79,0.4);
+      box-shadow: 0 0 12px rgba(243,201,105,0.4);
       flex-shrink: 0;
     }
     h3 {
@@ -160,7 +160,7 @@
     }
     .toc::before {
       content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px;
-      background: linear-gradient(90deg, transparent, rgba(212,255,79,0.5), rgba(94,179,255,0.3), transparent);
+      background: linear-gradient(90deg, transparent, rgba(243,201,105,0.5), rgba(224,163,90,0.3), transparent);
     }
     .toc-label {
       font-family: 'JetBrains Mono', monospace;
@@ -241,13 +241,13 @@
         <svg width="34" height="34" viewBox="0 0 38 38" fill="none" aria-hidden="true">
           <defs>
             <linearGradient id="dl" x1="4" y1="4" x2="34" y2="34" gradientUnits="userSpaceOnUse">
-              <stop stop-color="#d4ff4f"/>
-              <stop offset="0.6" stop-color="#8aff3d"/>
-              <stop offset="1" stop-color="#5eb3ff"/>
+              <stop stop-color="#f3c969"/>
+              <stop offset="0.6" stop-color="#e0a93f"/>
+              <stop offset="1" stop-color="#e0a35a"/>
             </linearGradient>
             <radialGradient id="db" cx="50%" cy="50%" r="50%">
-              <stop offset="0%" stop-color="#0e1a08"/>
-              <stop offset="100%" stop-color="#06060a"/>
+              <stop offset="0%" stop-color="#12110d"/>
+              <stop offset="100%" stop-color="#08080a"/>
             </radialGradient>
             <filter id="dg" x="-40%" y="-40%" width="180%" height="180%">
               <feGaussianBlur stdDeviation="1.4" result="blur"/>
@@ -255,7 +255,7 @@
             </filter>
           </defs>
           <circle cx="19" cy="19" r="18" fill="url(#db)"/>
-          <circle cx="19" cy="19" r="18" stroke="#d4ff4f" stroke-width="0.8" stroke-opacity="0.5"/>
+          <circle cx="19" cy="19" r="18" stroke="#f3c969" stroke-width="0.8" stroke-opacity="0.5"/>
           <path d="M11 13H27L11 25H27" stroke="url(#dl)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="miter" filter="url(#dg)"/>
           <circle cx="11" cy="13" r="2.5" fill="url(#dl)" filter="url(#dg)"/>
           <circle cx="27" cy="13" r="2.5" fill="url(#dl)" filter="url(#dg)"/>
